@@ -237,6 +237,13 @@ export class Func030 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 1167, 590, 1243, 659, 1000],
 		]
+	}, { // 21 页面是否为庭院(菜单未展开) 狐栖归处
+		desc: '页面是否为庭院_菜单未展开_狐栖归处',
+		oper: [
+			[left, 1280, 720, 0, 0, 20, 20, 1000]
+		]
+	}, { // 22 页面是否为庭院(菜单已展开) 狐栖归处
+		desc: '页面是否为庭院_菜单已展开_狐栖归处',
 	}];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
 		const thisconf = thisScript.scheme.config['30'];
@@ -315,9 +322,20 @@ export class Func030 implements IFuncOrigin {
 				desc: thisOperator[16].desc
 			}, {
 				desc: thisOperator[17].desc
+			}, {
+				desc: thisOperator[21].desc
+			}, {
+				desc: thisOperator[22].desc
 			}]
 		})) {
-			const point = thisScript.findMultiColor('庭院_町中竖牌');
+			let point = thisScript.findMultiColor('庭院_町中竖牌');
+			if (!point) {
+				// 如果在庭院中但由于视野偏左未看到町中，向左轻扫画面展示右侧町中
+				thisScript.regionSwipe([1000, 360, 1005, 365], [600, 360, 605, 365], 400);
+				sleep(1000);
+				thisScript.keepScreen();
+				point = thisScript.findMultiColor('庭院_町中竖牌');
+			}
 			if (point) {
 				const oper = [
 					[point.x, point.y, point.x + 5, point.y + 5, 1000]

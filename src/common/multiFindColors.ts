@@ -667,6 +667,7 @@ const multiFindColors: IMultiFindColorsOrigin = {
 	},
 	'庭院_町中竖牌': {
 		region: [center, 1280, 720, 0, 83, 1279, 412],
+		similar: 90,
 		desc: [
 			[1280, 720,
 				[
@@ -692,11 +693,13 @@ const multiFindColors: IMultiFindColorsOrigin = {
 			[   //  狐栖归处 町中
 				1280, 720,
 				[
-					[center, 1040, 360, 0x6e788c],
-					[center, 1040, 345, 0x3a4b63],
-					[center, 1040, 375, 0x647085],
-					[center, 1033, 350, 0xd2d7e0],
-					[center, 1033, 370, 0xd8dde5],
+					[center, 1055, 351, 0xffffff], // Anchor: 町 丁竖白
+					[center, 1055, 357, 0xffffff], // dx=0, dy=+6: 町 竖钩白
+					[center, 1052, 351, 0x687791], // dx=-3, dy=0: 丁左青灰缝隙
+					[center, 1052, 365, 0xffffff], // dx=-3, dy=+14: 中 上横白
+					[center, 1052, 369, 0xfefefe], // dx=-3, dy=+18: 中 下横白
+					[center, 1048, 369, 0x646e78], // dx=-7, dy=+18: 中 左侧深色
+					[center, 1055, 360, 0x96a0ab], // dx=0, dy=+9: 町中之间底色
 				]
 			]
 		]
