@@ -702,7 +702,8 @@ const multiFindColors: IMultiFindColorsOrigin = {
 		]
 	},
 	'庭院_探索灯笼': {
-		region: [center, 1280, 720, 0, 83, 1006, 320],
+		region: [center, 1280, 720, 0, 83, 1160, 360],
+		similar: 90,
 		desc: [
 			[1280, 720,
 				[
@@ -793,12 +794,12 @@ const multiFindColors: IMultiFindColorsOrigin = {
 			],
 			[1280, 720, // 狐栖归处 探索灯笼
 				[
-					[center, 764, 240, 0x201909],
-					[center, 764, 258, 0x181912],
-					[center, 764, 225, 0xd28352],
-					[center, 750, 245, 0xfcc3ac],
-					[center, 778, 245, 0xf08c62],
-					[center, 764, 272, 0xedb699],
+					[center, 1024, 237, 0x15120a], // "探" 核心黑墨 (Anchor)
+					[center, 1019, 247, 0x1f1d12], // "索" 核心黑墨 (dx=-5, dy=10)
+					[center, 1014, 242, 0xfddca7], // 内圈米黄底色 (dx=-10, dy=5)
+					[center, 1024, 252, 0xfcfdd9], // 索字右侧白亮色 (dx=0, dy=15)
+					[center, 1024, 267, 0xefb590], // 灯笼底部粉桃下摆 (dx=0, dy=30)
+					[center, 1009, 237, 0xdd7352], // 灯笼左侧主橘皮色 (dx=-15, dy=0)
 				]
 			],
 		]
