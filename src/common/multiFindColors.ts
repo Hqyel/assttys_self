@@ -688,11 +688,21 @@ const multiFindColors: IMultiFindColorsOrigin = {
 					[center, 709, 307, 0xa59e9d],
 					[center, 697, 257, 0xaaa290],
 				]
+			],
+			[   //  狐栖归处 町中
+				1280, 720,
+				[
+					[center, 1040, 360, 0x6e788c],
+					[center, 1040, 345, 0x3a4b63],
+					[center, 1040, 375, 0x647085],
+					[center, 1033, 350, 0xd2d7e0],
+					[center, 1033, 370, 0xd8dde5],
+				]
 			]
 		]
 	},
 	'庭院_探索灯笼': {
-		region: [center, 1280, 720, 0, 83, 1006, 284],
+		region: [center, 1280, 720, 0, 83, 1006, 320],
 		desc: [
 			[1280, 720,
 				[
@@ -779,6 +789,16 @@ const multiFindColors: IMultiFindColorsOrigin = {
 					[right, 668, 116, 0x40423f],
 					[right, 675, 146, 0x545043],
 					[right, 676, 166, 0x6f6248],
+				]
+			],
+			[1280, 720, // 狐栖归处 探索灯笼
+				[
+					[center, 764, 240, 0x201909],
+					[center, 764, 258, 0x181912],
+					[center, 764, 225, 0xd28352],
+					[center, 750, 245, 0xfcc3ac],
+					[center, 778, 245, 0xf08c62],
+					[center, 764, 272, 0xedb699],
 				]
 			],
 		]
@@ -1256,6 +1276,14 @@ const multiFindColors: IMultiFindColorsOrigin = {
 					[left, 276, 351, 0xf8e3ae],
 				]
 			],
+			[1280, 720, // 狐栖归处 悬赏封印
+				[
+					[left, 270, 275, 0xda4f3f],
+					[left, 258, 278, 0x46465e],
+					[left, 258, 266, 0x785f48],
+					[left, 242, 285, 0x36464c]
+				]
+			]
 		],
 	},
 	'金币妖怪_金币妖怪字样': {

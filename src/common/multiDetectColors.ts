@@ -548,14 +548,38 @@ const multiDetectColors: IMultiDetectColorsOrigin = {
 			]
 		]
 	},
+	'页面是否为庭院_菜单未展开_狐栖归处': {
+		desc: [
+			1280, 720,
+			[
+				[right, 1208, 637, 0xe0cfcb],
+				[right, 1189, 668, 0xd8c6c3],
+				[right, 1178, 707, 0x371e14],
+				[right, 1220, 600, 0x2d1610],
+				[right, 1188, 645, 0x7b2413],
+			]
+		]
+	},
 	'页面是否为庭院_菜单已展开_只支持默认庭院皮肤与默认装饰': {
 		desc: [
 			1280, 720,
 			[
 				[right, 1228, 646, 0xd6c6c3],
-				[center, 366, 56, 0xf9cf9a],
-				[right, 1154, 28, 0xd7b289],
-				[right, 1220, 25, 0xd3ae84],
+				[right, 1248, 620, 0xb1cada],
+				[right, 1248, 660, 0xaacdde],
+				[right, 1180, 660, 0x6f7e86],
+			]
+		],
+	},
+	'页面是否为庭院_菜单已展开_狐栖归处': {
+		desc: [
+			1280, 720,
+			[
+				[right, 1228, 646, 0xd0c1be],
+				[right, 1248, 620, 0xb1cada],
+				[right, 1248, 660, 0xaacdde],
+				[right, 1180, 660, 0x6f7e86],
+				[right, 1120, 660, 0x5c6d74],
 			]
 		],
 	},

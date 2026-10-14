@@ -8,7 +8,7 @@ const right = 2;
 export class Func029 implements IFuncOrigin {
 	id = 29;
 	name = '庭院进入探索地图';
-	desc = '请使用默认庭院皮肤，启用该功能后在庭院下会自动进入探索地图界面';
+	desc = '支持默认庭院皮肤与狐栖归处庭院皮肤，启用该功能后在庭院下会自动进入探索地图界面';
 	operator: IFuncOperatorOrigin[] = [{
 		// 庭院未打开菜单
 		desc: '页面是否为庭院_菜单未展开_只支持默认庭院皮肤与默认装饰',
@@ -17,6 +17,13 @@ export class Func029 implements IFuncOrigin {
 		]
 	}, { // 庭院已打开菜单
 		desc: '页面是否为庭院_菜单已展开_只支持默认庭院皮肤与默认装饰'
+	}, {
+		desc: '页面是否为庭院_菜单未展开_狐栖归处',
+		oper: [
+			[right, 1280, 720, 0, 0, 32, 63, 1200]
+		]
+	}, {
+		desc: '页面是否为庭院_菜单已展开_狐栖归处'
 	}]
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
 		if (thisScript.oper({
@@ -25,6 +32,10 @@ export class Func029 implements IFuncOrigin {
 				desc: thisOperator[0].desc
 			}, {
 				desc: thisOperator[1].desc
+			}, {
+				desc: thisOperator[2].desc
+			}, {
+				desc: thisOperator[3].desc
 			}]
 		})) {
 			const point = thisScript.findMultiColor('庭院_探索灯笼');

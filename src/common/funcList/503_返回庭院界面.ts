@@ -827,7 +827,25 @@ export class Func503 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 712, 391, 843, 420, 1000],
 		]
-	},];
+	}, {
+		// 50 页面是否为庭院(菜单未展开) 狐栖归处
+		desc: '页面是否为庭院_菜单未展开_狐栖归处',
+	}, {
+		// 51 页面是否为庭院(菜单已展开) 狐栖归处
+		desc: '页面是否为庭院_菜单已展开_狐栖归处',
+	}, {
+		// 52 狐栖归处町中立牌
+		desc: [
+			1280, 720,
+			[
+				[center, 1040, 360, 0x6e788c],
+				[center, 1040, 345, 0x3a4b63],
+				[center, 1040, 375, 0x647085],
+				[center, 1033, 350, 0xd2d7e0],
+				[center, 1033, 370, 0xd8dde5],
+			]
+		]
+	}];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
 		const thisConf = thisScript.scheme.config['503'];
 		// 增加全局开关
@@ -873,6 +891,10 @@ export class Func503 implements IFuncOrigin {
 					desc: thisOperator[13].desc
 				}, {
 					desc: thisOperator[16].desc
+				}, {
+					desc: thisOperator[50].desc
+				}, {
+					desc: thisOperator[51].desc
 				}]
 			})) {
 				// 町中与庭院几乎一致。。。只能用牌子来做比较
@@ -887,8 +909,10 @@ export class Func503 implements IFuncOrigin {
 					name: '庭院界面',
 					operator: [{
 						desc: thisOperator[12].desc
+					}, {
+						desc: thisOperator[52].desc
 					}]
-				})) {
+				}) || thisScript.findMultiColor('庭院_町中竖牌') || thisScript.findMultiColor('庭院_探索灯笼')) {
 					// 返回方案起始点,并重置起始点?必要性存疑
 					let next_scheme = thisScript.runtimeParams && thisScript.runtimeParams.next_scheme_name;
 					if (!next_scheme) {

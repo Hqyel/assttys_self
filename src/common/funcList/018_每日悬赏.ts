@@ -363,7 +363,14 @@ export class Func018 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 1156, 114, 1204, 154, 1000],
 		]
-	},]
+	}, { // 26 庭院未打开菜单_狐栖归处
+		desc: '页面是否为庭院_菜单未展开_狐栖归处',
+		oper: [
+			[right, 1280, 720, 1168, 592, 1230, 690, 1200]
+		]
+	}, { // 27 庭院已打开菜单_狐栖归处
+		desc: '页面是否为庭院_菜单已展开_狐栖归处'
+	}];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
 		const thisconf = thisScript.scheme.config['18'];
 		let enabledThisOperator = [{ desc: thisOperator[6].desc }];
@@ -377,7 +384,14 @@ export class Func018 implements IFuncOrigin {
 		if (!thisScript.global.xsOpened && thisScript.oper({
 			id: 18,
 			name: '悬赏_庭院界面',
-			operator: [{ desc: thisOperator[1].desc }, { desc: thisOperator[3].desc }, { desc: thisOperator[4].desc }, { desc: thisOperator[5].desc }]
+			operator: [
+				{ desc: thisOperator[1].desc },
+				{ desc: thisOperator[3].desc },
+				{ desc: thisOperator[4].desc },
+				{ desc: thisOperator[5].desc },
+				{ desc: thisOperator[26].desc },
+				{ desc: thisOperator[27].desc }
+			]
 		})) {
 			if (thisScript.oper({
 				id: 18,
